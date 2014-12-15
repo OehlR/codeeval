@@ -7,6 +7,7 @@ Check out my <a href="https://www.codeeval.com/profile/mpillar/">public profile<
 Session Info
 ---
 
+```{r}
 Versions unless otherwise stated:
 
 R version 3.0.2 (2013-09-25)
@@ -21,3 +22,4 @@ attached base packages:
 
 loaded via a namespace (and not attached):
 [1] tools_3.0.2
+```
