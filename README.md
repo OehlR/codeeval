@@ -2,7 +2,7 @@ codeeval
 ========
 
 My <a href="http://codeeval.com">CodeEval</a> solutions in R. 
-Check out my <a href="https://www.codeeval.com/profile/mpillar/">public profile</a>.
+Check out my <a href="https://www.codeeval.com/profile/oehlr/">public profile</a>.
 
 Session Info
 ---
