@@ -20,6 +20,13 @@ fib <- function(n) {
   return(res)
 }
 
-txt <- readLines(args[[1]])
-cat(sapply(txt, function(x) fib(as.numeric(x))),sep="\n")
-  
+### SOLUTION 1 : 31.764 ranking points
+# txt <- readLines(args[[1]])
+# cat(sapply(txt, function(x) fib(as.numeric(x))),sep="\n")
+
+### SOLUTION 2 : 31.638 ranking points
+con <- file(args[[1]], "r") 
+while(length(l <- readLines(con, n = 1, warn = FALSE)) > 0) {
+  cat(fib(as.numeric(l)),"\n")
+}
+close(con)
