@@ -8,4 +8,9 @@
 .Rdata
 
 # RStudio files
+*.Rproj
 .Rproj.user/
+.Rproj.user
+
+# Mac files
+*.DS_Store
