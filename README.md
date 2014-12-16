@@ -8,8 +8,6 @@ Session Info
 ---
 
 ```{r}
-Versions unless otherwise stated:
-
 R version 3.0.2 (2013-09-25)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
