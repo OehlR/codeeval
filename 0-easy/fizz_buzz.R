@@ -1,7 +1,7 @@
 args <- commandArgs(trailingOnly=TRUE)
 
 if(F) {
-  cat('70.920 -38.797 14.354 99.323 90.374 7.581\n-37.507 -3.263 40.079 27.999 65.213 -55.552\n',file=f<-tempfile())
+  cat('3 5 10\n2 7 15\n',file=f<-tempfile())
   args<-list(f)
   #unlink(f)
 }
@@ -9,6 +9,12 @@ if(F) {
 con <- file(args[[1]], "r") 
 while(length(l <- readLines(con, n = 1, warn = FALSE)) > 0) {
   x <- as.numeric(strsplit(l,split=" ")[[1]])
-  cat(paste0(sprintf("%.3f",sort(x)),collapse=" "),sep="\n")
+  v <- 1:x[3]
+  idsf <- (v %% x[1])==0
+  idsb <- (v %% x[2])==0
+  v[idsf] <- "F"
+  v[idsb] <- "B"
+  if (sum(idsf & idsb)>0) v[idsf & idsb] <- "FB"
+  cat(paste(v,collapse=" "),sep="\n")
 }
 close(con)
